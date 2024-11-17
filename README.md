@@ -1,2 +1,3 @@
-# pos-terminal-app
+# 🛒 pos-terminal-app
+
 A simple POS terminal application
