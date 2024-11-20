@@ -1,6 +1,6 @@
 extern crate colored;
 mod pos;
-mod product;
+mod line_item;
 mod sale;
 use colored::*;
 
@@ -24,7 +24,7 @@ fn main() {
                 let quantity: u32 = pos::Pos::get_input("Enter product quantity: ")
                     .parse()
                     .expect(&format!("{}", "Invalid quantity".bold().red()));
-                let product = product::Product::new(price, quantity);
+                let product = line_item::LineItem::new(price, quantity);
                 pos.add_product(product);
             }
             "2" => {

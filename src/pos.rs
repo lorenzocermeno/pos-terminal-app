@@ -1,4 +1,4 @@
-use crate::product::Product;
+use crate::line_item::LineItem;
 use crate::sale::Sale;
 use chrono::Utc;
 use colored::Colorize;
@@ -6,7 +6,7 @@ use nanoid::nanoid;
 use std::io::{self, Write};
 
 pub struct Pos {
-    pub products: Vec<Product>,
+    pub products: Vec<LineItem>,
     pub sales: Vec<Sale>,
 }
 
@@ -15,7 +15,7 @@ impl Pos {
         Pos { products: Vec::new(), sales: Vec::new() }
     }
 
-    pub fn add_product(&mut self, product: Product) {
+    pub fn add_product(&mut self, product: LineItem) {
         self.products.push(product);
         println!("{}", "Product added!".bold().green());
     }
